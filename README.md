@@ -32,7 +32,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 
 2. We cut a circle out of the screening that was slightly bigger than the hole cut in the lid. Using a scrap piece of cardboard as a mixing plate and a paint stick we mixed the gorilla two part epoxy. We used the paint stick to dab the epoxy on the perimeter of the circle, and placed the cut screening on the epoxy. We tapped the screen down onto the epoxy while wearing gloves, then taped the sides of the screen down to dry, as shown in the image below.
 <p align="center">
-<img width=50% src="https://github.com/amda294/Fancy-Bucket-3000/blob/main/drying%20lid.JPG">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/drying%20lid.JPG">
 </p>
 <p align="center">
   <em>Figure x: Lid and mesh cover drying after assembly</em>
@@ -46,7 +46,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 
 6. The same process was done with the 12" long pieces, but they were clamped horizontally between the legs, 1 inch down from the base of the legs. For the 8" piece, it was glued horizontally between the two 12" pieces. All of these pieces were clamped down and set to dry overnight. The following image shows the pieces together, clamped down to dry. 
 <p align="center">
-<img width=50% src="https://github.com/amda294/Fancy-Bucket-3000/blob/main/drying%20stand.JPG">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/drying%20stand.JPG">
 </p>
 <p align="center">
   <em>Figure X: Wooden stand drying after assembly</em>

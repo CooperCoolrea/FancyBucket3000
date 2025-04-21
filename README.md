@@ -73,12 +73,22 @@ Could another test engineer replicate your tests?
 All test equipment specified (model numbers) and procedures fully described
 
 **Volume Sensing**
-1. To test if the volume monitoring was accurate, we 
+1. To test if the ultrasonic sensor was working correctly and that our GUI was showing the correct volume, we would first fill our bucket to any depth.
+2. Then, we would measure the depth and multiply that depth by the cross sectional area of the bucket. 
+3. Finally, we would run our code and see if the volume value it was reporting was approximately the same as the calculated value. We allowed it to be incorrect by _____.
+
 
 **pH Sensing**
+1. To test the pH sensor, we filled cups with fluids that had different pH values. 
+2. Then we would remove the pH sensor from its cover and insert it into the different fluids.
+3. Finally, we would ensure that the pH values being reported by the serial monitor were approximately correct. We merely ensured that anything that was in its estimated range. If we were testing the pH sensor in an extremely acidic solution, we knew our pH sensor was not working if it was reporting an almost neutral solution.
+4. Initially, our pH sensor was reporting very similar, neutral values no matter what fluid it was submerged in. To fix this, we changed the calibration in our code ______________.
 
 
 **Automatic Ball Valve**
+1. To test the automatic valve opening, we merely had to run our code and click the button on our GUI that was labeled “___________.” If the valve opened, we considered that to be a successful trial.
+2. Then, to test the closing function, we clicked the button on our GUI that was labeled “______.” If the valve closed, that was a successful trial. 
+3. Finally, the valve needed to close automatically when it was empty. To test this, we would allow the bucket to release all of its contents, then we would observe the behavior of the ball valve. If it closed after releasing all the water, we considered that a successful trial.
 
 
 ## Design Decision Discussion
@@ -89,12 +99,11 @@ One of the first design decisions we made was to put a lid on our bucket with a 
 
 Another design decision we made was to use a ball valve as the connection between the water storage and water distribution. We mainly decided to use a ball valve because we were afraid that a solenoid valve would be unable to open with the amount of pressure at the bottom of our bucket. We also considered rigging up an automatic opening with a servo or stepper motor; however, we decided that neither motor would have the power to open against the pressure of the water. The ball valve we used was also fairly simple to implement __________.
 
-We also decided to use an electric powered pH sensor
+We decided to use an electronic pH sensor in the interest of time. It was very simple to code and calibrate. We also included a manual option on our GUI in case our users wanted to use a paper pH strip, then input their own reading. We were originally going to use a camera and code it to read the pH from the color; however, we decided this would be difficult since we would have to worry about interference from background colors and potentially would’ve had to utilize artificial intelligence. We also considered only using a manual option; however, we wanted to challenge ourselves and did not want there to have to be a secondary purchase to use our device. Another engineer could implement the camera reading or ____.
 
-1. Electrical box surrounding the Redboard was 3D printed to be waterproof. We left slits in the top and bottom of the box for wires to be able to escape
-2. Cut a hole in the bottom of the bucket because ____
-3. Decided to use a ball valve because_____. We could've used a solenoid valve or a servo but ____
-4. We decided to use an electrical pH sensor because ____. We were originally going to use a camera to 
+We decided to 3D print a plastic box to hold our Redboard and circuitry because we wanted to protect the electronics from water damage. The lid of our electronic box includes a holder for the pH sensor. It may have been simpler to cut out a box from wood or metal; however, we did not want to have to wait for glue to dry, weld, or seal the box. Additionally, other engineers could improve on our design by making the box more flush with the curved surface of the bucket. We made ours flat and caulked it, because it was quick and effective. We also kept in mind that this was just a prototype.
+
+One thing we debated at the beginning stages of our project was where to put the outlet of our bucket. We were debating whether or not to put it on the bottom surface or whether to put it on the side of the bucket. We decided to put it on the bottom since _________. One issue with this location is that our pipe connection is not flush with the bottom and extends upward into the bucket. This means the bucket will never be entirely empty. Another engineer could improve our design by slanting the inside of the bottom of the bucket. This would prevent any stagnation.
 
 ## Testing Results Discussion
 Are the capabilities of the system described? Where would this design work? How well does it work? What are its limitations? What can it not do?

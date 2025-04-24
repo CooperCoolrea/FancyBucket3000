@@ -7,7 +7,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 ### Materials
 
 
-**Part 2: Prompt 2**
+**Table 1: Bill of Materials**
 
 
 |Part Number|Part Name| Description| Notes|Quantity|Units|Total Cost| Supplier| Supplier Part Number|Link|Package Size|Unit|Package price|

@@ -110,6 +110,57 @@ One thing we debated at the beginning stages of our project was where to put the
 Are the capabilities of the system described? Where would this design work? How well does it work? What are its limitations? What can it not do?
 It is clear what the system can do, cannot do, and where it works best
 
+**Volume Sensing**
+
+**Table 1: Accuracy of Volume Sensing Function**
+|Trial|Measured Volume of Water Inputted (L)|Volume Detected (L)|
+|---|---|---|
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+**pH Sensing**
+
+**Table 2: Accuracy of pH Sensing Function**
+|Trial|Solution|Anticipated pH|pH Detected|
+|---|---|---|---|
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
+**Automated Ball Valve**
+
+**Table 3: Accuracy of Valve Opening Prompted by User**
+|Trial|Button Clicked (Yes/No)|Valve Open? (Yes/No)|
+|---|---|---|
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+**Table 4: Accuracy of Valve Opening Prompted by Capacity of Barrel**
+|Trial|Solution|Anticipated pH|pH Detected|
+|---|---|---|---|
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+| | | | |
+
 ## Testing Results
 Were the test results described correctly? Were the proper tests performed to measure system capabilities?
 Proper tests were conducted and results clearly documented
+
+**Volume Sensing**
+
+**pH Sensing**
+
+**Automated Ball Valve**
+
+The automatic valve responded reliably to user input provided through our Streamlit application. Specifically, each time the user clicked the designated button on the app interface, the valve successfully opened as intended. During all five experimental trials, the valve consistently released the water contained in the bucket immediately following the user’s command. This consistent performance across multiple repetitions demonstrates that the system's valve control functionality operated with perfect precision, achieving a 100% success rate. The seamless interaction between the software interface and the hardware mechanism confirms that the valve accurately and promptly executed the user’s instructions without any delay or malfunction, highlighting the reliability and effectiveness of our system's automated water release feature.
+

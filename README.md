@@ -92,7 +92,7 @@ INSERT PIC
 1. To construct our system, we first built a simple circuit with a ball valve and a motor controller. The circuit diagram can be seen in figure ___.
    
 <p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/box%20picture.JPG">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Circuit%20Diagram-1.jpg">
 </p>
 <p align="center">
   <em>Figure X: Final 3D printed box and lid</em>

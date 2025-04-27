@@ -89,18 +89,17 @@ INSERT PIC
 
 
 **Circuit**
-1. To construct our system, we first built a simple circuit with a ball valve and a motor controller. The circuit diagram can be seen in figure ___.
-   
+1. To construct our system, we first built a simple circuit that included a ball valve and a motor controller.
+2. Next, we had to create a second power supply for the ball valve. One thing that we did not originally consider when we ordered the ball valve was that it required at least 9 Volts of power to function properly. Our Redboard could only provide 5 Volts and the battery pack that came with our Sparkfun Inventor Kit could only provide 6 Volts (1.5 Volts per battery). Thus, we found a 12 Volt source, then retrofit the wires to fit the ground and positive wires of the connector of the double A battery pack holder. After stripping the wires, we used a multimeter to determine which wire was positive and which was negative. Then, we soldered them to the battery pack connecter and wrapped the wires in electrical tape.
+3. Next, we added a pH sensor. We connected wires to the ports on the pH sensor for power, ground, and one labled "Po" to represent pH output.
+4. Finally, we incorporated an ultrasonic sensor. The final circuit diagram can be seen in figure _____. A picture of our final circuit can be seen in figure ________.
+
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Circuit%20Diagram-1.jpg">
 </p>
 <p align="center">
-  <em>Figure X: Final 3D printed box and lid</em>
+  <em>Figure X: Complete Circuit Diagram </em>
 </p>
-
-3. One thing that we did not originally consider when we ordered the ball valve was that it required at least 9 Volts of power to function properly. Our Redboard could only provide 5 Volts and the battery pack that came with our Sparkfun Inventor Kit could only provide 6 Volts (1.5 Volts per battery). Thus, we had to ________________. After stripping the wires, we soldered them to _____, then added electrical tape _____.
-4. Next, we added a pH sensor. The circuit diagram with the pH sensor included can be seen in figure ___.
-5. Finally, we incorporated an ultrasonic sensor. The circuit diagram for the ultrasonic sensor can be seen in figure _____. A picture of our final build can be seen in figure ________.
 
 **Software and GUI**
 1. To create the code for our project, we prompted ChatGPT to create a script for Arduino IDE that controls an electronic ball valve, a pH sensor, and an ultrasonic sensor. To control the electronic ball valve, the program needed to open the valve with the click of a button and automatically close the valve after water has been released. The pH sensor needed to read the pH accurately, report it to the user, and provide a treatment recommendation. The ultrasonic sensor needed to report the volume to the user and notify the user when it is too full.
@@ -119,7 +118,7 @@ All test equipment specified (model numbers) and procedures fully described
 **Volume Sensing**
 1. To test if the ultrasonic sensor was working correctly and that our GUI was showing the correct volume, we would first fill our bucket to any depth.
 2. Then, we would measure the depth and multiply that depth by the cross sectional area of the bucket. 
-3. Finally, we would run our code and see if the volume value it was reporting was approximately the same as the calculated value. We allowed it to be incorrect by _____.
+3. Finally, we would run our code and see if the volume value it was reporting was approximately the same as the calculated value. If it was not, we would recallibrate our code and rerun the test.
 
 
 **pH Sensing**
@@ -131,15 +130,12 @@ All test equipment specified (model numbers) and procedures fully described
 
 
 **Automatic Ball Valve**
-1. To test the automatic valve opening, we merely had to run our code and click the button on our GUI that was labeled “___________.” If the valve opened, we considered that to be a successful trial.
-2. Then, to test the closing function, we clicked the button on our GUI that was labeled “______.” If the valve closed, that was a successful trial. 
+1. To test the automatic valve opening, we merely had to run our code and click the button on our GUI that was labeled “Open Valve.” If the valve opened, we considered that to be a successful trial.
+2. Then, to test the closing function, we clicked the button on our GUI that was labeled “Close Valve.” If the valve closed, that was a successful trial. 
 3. Finally, the valve needed to close automatically when it was empty. To test this, we would allow the bucket to release all of its contents, then we would observe the behavior of the ball valve. If it closed after releasing all the water, we considered that a successful trial.
 
 
 ## Design Decision Discussion
-Could competent engineer build on top of your design with modifications to provide different capabilities?
-Design decisions are described completely. This is an excellent reference design for this type of system
-
 One of the first design decisions we made was to put a lid on our bucket with a large hole cutout with a mesh covering. This prevents leaves from getting in the bucket and allows water to enter. The border of the cutout is where the ultrasonic sensor rests. This prevents it from being rained on from above; however, the sensor would still be at risk of water damage if the bucket overfills. There is definitely room to improve this design. For example, someone could add a cover that automatically closes the bucket when it gets full. This would eliminate any risk of water damage. We would have probably included this in our design if we were not limited on time.
 
 Another design decision we made was to use a ball valve as the connection between the water storage and water distribution. We mainly decided to use a ball valve because we were afraid that a solenoid valve would be unable to open with the amount of pressure at the bottom of our bucket. We also considered rigging up an automatic opening with a servo or stepper motor; however, we decided that neither motor would have the power to open against the pressure of the water. The ball valve we used was also fairly simple to implement __________.

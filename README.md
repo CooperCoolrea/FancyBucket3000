@@ -89,9 +89,18 @@ INSERT PIC
 
 
 **Circuit**
-1. To construct our system, we first built a simple circuit with a ball valve and a motor controller. The circuit diagram can be seen in figure ___. One thing that we did not originally consider when we ordered the ball valve was that it required at least 9 Volts of power to function properly. Our Redboard could only provide 5 Volts and the battery pack that came with our Sparkfun Inventor Kit could only provide 6 Volts (1.5 Volts per battery). Thus, we had to ________________. After stripping the wires, we soldered them to _____, then added electrical tape _____.
-2. Next, we added a pH sensor. The circuit diagram with the pH sensor included can be seen in figure ___.
-3. Finally, we incorporated an ultrasonic sensor. The circuit diagram for the ultrasonic sensor can be seen in figure _____. A picture of our final build can be seen in figure ________.
+1. To construct our system, we first built a simple circuit with a ball valve and a motor controller. The circuit diagram can be seen in figure ___.
+   
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/box%20picture.JPG">
+</p>
+<p align="center">
+  <em>Figure X: Final 3D printed box and lid</em>
+</p>
+
+3. One thing that we did not originally consider when we ordered the ball valve was that it required at least 9 Volts of power to function properly. Our Redboard could only provide 5 Volts and the battery pack that came with our Sparkfun Inventor Kit could only provide 6 Volts (1.5 Volts per battery). Thus, we had to ________________. After stripping the wires, we soldered them to _____, then added electrical tape _____.
+4. Next, we added a pH sensor. The circuit diagram with the pH sensor included can be seen in figure ___.
+5. Finally, we incorporated an ultrasonic sensor. The circuit diagram for the ultrasonic sensor can be seen in figure _____. A picture of our final build can be seen in figure ________.
 
 **Software and GUI**
 1. To create the code for our project, we prompted ChatGPT to create a script for Arduino IDE that controls an electronic ball valve, a pH sensor, and an ultrasonic sensor. To control the electronic ball valve, the program needed to open the valve with the click of a button and automatically close the valve after water has been released. The pH sensor needed to read the pH accurately, report it to the user, and provide a treatment recommendation. The ultrasonic sensor needed to report the volume to the user and notify the user when it is too full.

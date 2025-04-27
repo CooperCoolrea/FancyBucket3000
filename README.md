@@ -94,8 +94,9 @@ INSERT PIC
 3. Finally, we incorporated an ultrasonic sensor. The circuit diagram for the ultrasonic sensor can be seen in figure _____. A picture of our final build can be seen in figure ________.
 
 **Software and GUI**
-1. 
-
+1. To create the code for our project, we prompted ChatGPT to create a script for Arduino IDE that controls an electronic ball valve, a pH sensor, and an ultrasonic sensor. To control the electronic ball valve, the program needed to open the valve with the click of a button and automatically close the valve after water has been released. The pH sensor needed to read the pH accurately, report it to the user, and provide a treatment recommendation. The ultrasonic sensor needed to report the volume to the user and notify the user when it is too full.
+2. After ChatGPT provided the code, we tested it with our circuit design. If it did not work appropriately, we would identify the issue, then prompt ChatGPT to fix it. We continued this process until our code worked successfully.
+3. Once we had a working code, we had ChatGPT rewrite it in Python to be used in Visual Studio with a user interface (UI).
 
 
 ## Testing Description

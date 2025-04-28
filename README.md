@@ -54,21 +54,35 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
   <em>Figure X: Wooden stand drying after assembly</em>
 </p>
 
-7. For the valve portion of the bucket, we used a drill with a step cone drill bit attachment to make a 1/2 inch hole in the center of the bottom of the bucket. We applied silicone caulk  to the area around the hole on the inside of the bucket, and screwed in the pipe attachment as far as it could go. This was left to dry overnight. When the bucket was eventually dry, a wrench was used to hold the pipe in place while the sensor was glued on. 
+7. For the valve portion of the bucket, we used a drill with a step cone drill bit attachment to make a 1/2 inch hole in the center of the bottom of the bucket. We applied silicone caulk  to the area around the hole on the inside of the bucket, and screwed in the pipe attachment as far as it could go. This was left to dry overnight. When the bucket was eventually dry, a wrench was used to hold the pipe in place while the sensor was glued on. The final bucket and lid design is shown below.
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Bucket%20and%20Lid%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure X: 3D model of bucket and lid design</em>
+</p>
  
-8. To cut the hole in the wooden stand, we sketched out an area around the size of the entire valve, and used an oscillating saw to cut out the hole. 
+8. To cut the hole in the wooden stand, we sketched out an area around the size of the entire valve, and used an oscillating saw to cut out the hole. The final wooden stand design is shown below.
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Wooden%20Stand%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure X: 3D model of wooden stand</em>
+</p>
 
 9. For the waterproof box around our electronics, we 3D modeled and printed a box and sliding door in Autodesk Fusion. The following images show the design and box, and the 3D model is in the repository. 
 
 <p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/3D%20box.png">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Electronic%20Box%20Drawing.png">
 </p>
 <p align="center">
   <em>Figure X: 3D model of waterproof box</em>
 </p>
 
 <p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/3D%20lid.png">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Cover%20for%20Electric%20Box%20Drawing.png">
 </p>
 <p align="center">
   <em>Figure X: 3D model of waterproof box lid</em>

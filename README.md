@@ -188,22 +188,32 @@ It is clear what the system can do, cannot do, and where it works best
 **Table 2: Accuracy of pH Sensing Function**
 |Trial|Solution|Anticipated pH|pH Detected|
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|1|Distilled Water|~5.8|6.45|
+|2|Distilled Water|~5.8|6.45|
+|3|Distilled Water|~5.8|6.45|
+|4|Vinegar and Water Solution|~4-5 (Acidic)|6.47|
+|5|Baking Soda and Water Solution|~8-9 (Basic)|6.53|
 
 **Automated Ball Valve**
 
 **Table 3: Accuracy of Valve Opening Prompted by User**
 |Trial|Button Clicked (Yes/No)|Valve Open? (Yes/No)|
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+|1 |Yes|Yes|
+|2 |Yes|Yes|
+|3 |Yes|Yes|
+|4 |Yes|Yes|
+|5 |Yes|Yes|
+
+**Table 4: Accuracy of Valve Closing Prompted by User**
+|Trial|Button Clicked (Yes/No)|Valve Close? (Yes/No)|
+|---|---|---|
+|1 |Yes|Yes|
+|2 |Yes|Yes|
+|3 |Yes|Yes|
+|4 |Yes|Yes|
+|5 |Yes|Yes|
+
 
 **Table 4: Accuracy of Valve Opening Prompted by Capacity of Barrel**
 |Trial|Solution|Anticipated pH|pH Detected|
@@ -221,6 +231,7 @@ Proper tests were conducted and results clearly documented
 **Volume Sensing**
 
 **pH Sensing**
+In testing the pH sensor, we first calibrated it using distilled water to ensure it returned accurate baseline readings, which it did relatively reliably yielding a constant pH value of 6.45. We deemed this accurate as the pH of distilled water in Lexington is around 5.8. However, when we tested the sensor with other common solutions such as water mixed with vinegar (acidic) and water mixed with baking soda (basic), the sensor displayed little to no variation in the pH readings. Despite the expected chemical changes, the sensor readings remained largely unchanged, indicating a malfunction. Based on these observations, we concluded that the pH probe was defective. To address this issue and maintain functionality, we integrated a manual pH input option into our GUI. This allows users to enter accurate pH values themselves, ensuring that the system can still provide appropriate treatment suggestions based on reliable input.
 
 **Automated Ball Valve**
 

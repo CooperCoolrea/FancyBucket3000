@@ -175,13 +175,13 @@ It is clear what the system can do, cannot do, and where it works best
 **Volume Sensing**
 
 **Table 1: Accuracy of Volume Sensing Function**
-|Trial|Measured Volume of Water Inputted (L)|Volume Detected (L)|
+|Trial|Measured Volume of Water Inputted (gal)|Volume Detected (gal)|
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+|1|0|0.22|
+|2|0|0.23|
+|3|0|0.29|
+|4|0|0.21|
+|5|0|0.22|
 
 **pH Sensing**
 
@@ -215,14 +215,15 @@ It is clear what the system can do, cannot do, and where it works best
 |5 |Yes|Yes|
 
 
-**Table 4: Accuracy of Valve Opening Prompted by Capacity of Barrel**
-|Trial|Solution|Anticipated pH|pH Detected|
+**Table 5: Accuracy of Valve Opening Prompted by Capacity of Barrel**
+|Trial|Volume Detected (gal)|Required Volume for Maximum Capacity(gal)|Valve Open? (Yes/No)|
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|1 |4.46| &ge;3.66 |Yes|
+|2 |4.42| &ge;3.66|Yes|
+|3 |4.48| &ge;3.66|Yes|
+|4 |3.69| &ge;3.66|Yes|
+|5 |4.18| &ge;3.66|Yes|
+
 
 ## Testing Results
 Were the test results described correctly? Were the proper tests performed to measure system capabilities?
@@ -234,6 +235,5 @@ Proper tests were conducted and results clearly documented
 In testing the pH sensor, we first calibrated it using distilled water to ensure it returned accurate baseline readings, which it did relatively reliably yielding a constant pH value of 6.45. We deemed this accurate as the pH of distilled water in Lexington is around 5.8. However, when we tested the sensor with other common solutions such as water mixed with vinegar (acidic) and water mixed with baking soda (basic), the sensor displayed little to no variation in the pH readings. Despite the expected chemical changes, the sensor readings remained largely unchanged, indicating a malfunction. Based on these observations, we concluded that the pH probe was defective. To address this issue and maintain functionality, we integrated a manual pH input option into our GUI. This allows users to enter accurate pH values themselves, ensuring that the system can still provide appropriate treatment suggestions based on reliable input.
 
 **Automated Ball Valve**
-
 The automatic valve responded reliably to user input provided through our Streamlit application. Specifically, each time the user clicked the designated button on the app interface, the valve successfully opened as intended. During all five experimental trials, the valve consistently released the water contained in the bucket immediately following the user’s command. This consistent performance across multiple repetitions demonstrates that the system's valve control functionality operated with perfect precision, achieving a 100% success rate. The seamless interaction between the software interface and the hardware mechanism confirms that the valve accurately and promptly executed the user’s instructions without any delay or malfunction, highlighting the reliability and effectiveness of our system's automated water release feature.
 

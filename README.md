@@ -23,10 +23,46 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 | 1010 | Bucket lid | Standard lid for 5 gallon plastic pail |  | 1.0 | each | 2.00 | Uline | S-9948BLU | [Link](https://www.uline.com/Product/Detail/S-9948BLU/Pails/Standard-Lid-for-35-5-6-and-7-Gallon-Plastic-Pail-Blue) | 1.0 | each | 2.00 |
 | 1011 | Bucket connector | 1/2 in. PVC schedule 40 male adapter |  | 1.0 | each | 0.59 | Home Depot | PVC021090600HD | [Link](https://www.homedepot.com/p/Charlotte-Pipe-1-2-in-PVC-Schedule-40-Male-MPT-x-S-Adapter-PVC021090600HD/203811636) | 1.0 | each | 0.59 |
 | 1012 | Silicone caulk | GE Silicone 1 All Purpose Clear Caulk |  | 1.5 | oz | 1.32 | Lowes | 2795576 | [Link](https://www.lowes.com/pd/GE-Silicone-1-All-Purpose-Windows-Doors-Exteriors-10-1-oz-Clear-Silicone-Caulk/5013443639) | 10.1 | oz | 8.88 |
-| 1013 | Hot glue | AdTech Crystal Clear Hot Glue Sticks | 4" length, .44 in diameter | 3.0 | sticks | 1.04 | Walmart | - | [Link](https://www.walmart.com/ip/AdTech-Crystal-Clear-Hot-Glue-Gun-Full-Size-4-x-44-10-Sticks/22217933) | 10.0 | sticks | 3.48 |
+
 
 
 ### Drawings and Circuit Diagrams
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Wooden%20Stand%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure 1: 3D model of wooden stand</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Bucket%20and%20Lid%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure 2: 3D model of bucket and lid design</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Electronic%20Box%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure 3: 3D model of waterproof box</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Cover%20for%20Electric%20Box%20Drawing.png">
+</p>
+<p align="center">
+  <em>Figure 4: 3D model of waterproof box lid</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Circuit%20Diagram-1.jpg">
+</p>
+<p align="center">
+  <em>Figure 5: Circuit Drawing</em>
+</p>
+
 ### Code
 ### Assembly Instructions
 **Bucket and Stand Assembly**
@@ -54,39 +90,11 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
   <em>Figure X: Wooden stand drying after assembly</em>
 </p>
 
-7. For the valve portion of the bucket, we used a drill with a step cone drill bit attachment to make a 1/2 inch hole in the center of the bottom of the bucket. We applied silicone caulk  to the area around the hole on the inside of the bucket, and screwed in the pipe attachment as far as it could go. This was left to dry overnight. When the bucket was eventually dry, a wrench was used to hold the pipe in place while the sensor was glued on. The final bucket and lid design is shown below.
-
-<p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Bucket%20and%20Lid%20Drawing.png">
-</p>
-<p align="center">
-  <em>Figure X: 3D model of bucket and lid design</em>
-</p>
+7. For the valve portion of the bucket, we used a drill with a step cone drill bit attachment to make a 1/2 inch hole in the center of the bottom of the bucket. We applied silicone caulk  to the area around the hole on the inside of the bucket, and screwed in the pipe attachment as far as it could go. This was left to dry overnight. When the bucket was eventually dry, a wrench was used to hold the pipe in place while the sensor was glued on. 
  
-8. To cut the hole in the wooden stand, we sketched out an area around the size of the entire valve, and used an oscillating saw to cut out the hole. The final wooden stand design is shown below.
-
-<p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Wooden%20Stand%20Drawing.png">
-</p>
-<p align="center">
-  <em>Figure X: 3D model of wooden stand</em>
-</p>
+8. To cut the hole in the wooden stand, we sketched out an area around the size of the entire valve, and used an oscillating saw to cut out the hole. 
 
 9. For the waterproof box around our electronics, we 3D modeled and printed a box and sliding door in Autodesk Fusion. The following images show the design and box, and the 3D model is in the repository. 
-
-<p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Electronic%20Box%20Drawing.png">
-</p>
-<p align="center">
-  <em>Figure X: 3D model of waterproof box</em>
-</p>
-
-<p align="center">
-<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Cover%20for%20Electric%20Box%20Drawing.png">
-</p>
-<p align="center">
-  <em>Figure X: 3D model of waterproof box lid</em>
-</p>
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/box%20picture.JPG">

@@ -148,7 +148,7 @@ PASTE HERE
 
 13. To attach the electronics box, we put a vertical line of the same caulk down the center of back of the plywood attached to the box. We laid the box face down on a table, then placed the side of the bucket on top of it, positioning the box to be approximately 3 inches below the hole we cut for the ultrasonic sensor. The bucket was propped up in position by objects we had, then left to dry overnight.
 
-14. We used some double sided tape to hols the circuit in place when we open and close the electronics box, and threaded all of the appropriate wires through. After this, the Fancy Bucket 3000 was fully assembled!
+14. We used some double sided tape to hold the circuit in place when we open and close the electronics box, and threaded all of the appropriate wires through. After this, the Fancy Bucket 3000 was fully assembled!
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Final%20box.JPG">

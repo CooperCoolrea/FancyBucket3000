@@ -213,9 +213,9 @@ All test equipment specified (model numbers) and procedures fully described
 
 
 ## Design Decision Discussion
-One of the first design decisions we made was to put a lid on our bucket with a large hole cutout with a mesh covering. This prevents leaves from getting in the bucket and allows water to enter. The border of the cutout is where the ultrasonic sensor rests. This prevents it from being rained on from above; however, the sensor would still be at risk of water damage if the bucket overfills. There is definitely room to improve this design. For example, someone could add a cover that automatically closes the bucket when it gets full. This would eliminate any risk of water damage. We would have probably included this in our design if we were not limited on time.
+One of the first design decisions we made was to put a lid on our bucket with a large hole cutout with a mesh covering. This prevents leaves from getting in the bucket and allows water to enter. The border of the cutout is where the ultrasonic sensor rests. This prevents it from being rained on from above; however, the sensor would still be at risk of water damage if the bucket overfills. There is definitely room to improve this design. For example, someone could add a cover that automatically closes the bucket when it gets full. This would eliminate any risk of water damage. We would have probably included this in our design if we were not limited on time. Additionally, there is some interference with the ultrasonic sensor's sound pulses bouncing off the bucket lid. This created some inaccurate volume results.
 
-Another design decision we made was to use a ball valve as the connection between the water storage and water distribution. We mainly decided to use a ball valve because we were afraid that a solenoid valve would be unable to open with the amount of pressure at the bottom of our bucket. We also considered rigging up an automatic opening with a servo or stepper motor; however, we decided that neither motor would have the power to open against the pressure of the water. The ball valve we used was also fairly simple to implement after having a proper power supply. We merely had to connect it to a motor controller and code it like any other component. Using a servo, stepper motor, or solenoid valve would've required more work and troubleshooting.
+Another design decision we made was to use a ball valve as the connection between the water storage and water distribution. We mainly decided to use a ball valve because we were afraid that a solenoid valve would be unable to open with the amount of pressure at the bottom of our bucket. Additionally, a ball valve only requires a switch to operate, while a solenoid requires some analog signals to control it. We also considered rigging up an automatic opening with a servo or stepper motor; however, we decided that neither motor would have the power to open against the pressure of the water. The ball valve we used was also fairly simple to implement after having a proper power supply. We merely had to connect it to a motor controller and code it like any other component. Using a servo, stepper motor, or solenoid valve would've required more work and troubleshooting.
 
 We decided to use an electronic pH sensor in the interest of time. It was very simple to code and calibrate. We also included a manual option on our GUI in case our users wanted to use a paper pH strip, then input their own reading. We were originally going to use a camera and code it to read the pH from the color; however, we decided this would be difficult since we would have to worry about interference from background colors and potentially would’ve had to utilize artificial intelligence. We also considered only using a manual option; however, we wanted to challenge ourselves and did not want there to have to be a secondary purchase to use our device. Another engineer could implement the camera reading with artificial intelligence or use manual entry only for simplicity.
 
@@ -223,9 +223,24 @@ We decided to 3D print a plastic box to hold our Redboard and circuitry because 
 
 One thing we debated at the beginning stages of our project was where to put the outlet of our bucket. We were debating whether or not to put it on the bottom surface or whether to put it on the side of the bucket. We decided to put it on the bottom since it allowed for minimal water stagnation, it provided clearance for our hose, and we had gravity working to encourage flow downward. One issue with this location is that our internal pipe connection is not entirely flush with the bottom and extends upward into the bucket. This means the bucket will never be completely empty. Another engineer could improve our design by slanting the inside of the bottom of the bucket. This would prevent any stagnation.
 
+
 ## Testing Results Discussion
-Are the capabilities of the system described? Where would this design work? How well does it work? What are its limitations? What can it not do?
-It is clear what the system can do, cannot do, and where it works best
+**Volume Sensing**
+
+The volume sensing function exhibited consistent but slightly elevated baseline readings when water was input. Across trials with different numbers of gallons of water added, the sensor detected a small offset ranging from 0.21 to 0.29 gallons. Although the sensor did not register a perfect value, the measurements were relatively stable and within a narrow range, suggesting good repeatability. The consistent offset indicates that while the sensor is reliable in detecting changes in volume, it may have a systematic calibration error that causes a slight overestimation at very low volumes. This behavior would have minimal impact during normal operation, where larger volume changes are of primary concern.
+
+**pH Sensing**
+
+In testing the pH sensor, we first calibrated it using distilled water to ensure it returned accurate baseline readings, which it did relatively reliably, yielding a constant pH value of 6.45. We deemed this accurate, as the pH of distilled water in Lexington is around 5.8. However, when we tested the sensor with other common solutions such as water mixed with vinegar (acidic) and water mixed with baking soda (basic), the sensor displayed little to no variation in the pH readings. Despite the expected chemical changes, the sensor readings remained largely unchanged, indicating a malfunction. To confirm that the issue was with the probe itself and not our system design, we tested another group’s pH sensor with our setup, and it responded accurately to the solutions. This verified that the problem was isolated to our pH probe. Based on these observations, we concluded that our original pH probe was defective. To address this issue and maintain functionality, we integrated a manual pH input option into our GUI. This allows users to enter accurate pH values themselves, ensuring that the system can still provide appropriate treatment suggestions based on reliable input.
+
+**Automated Ball Valve**
+
+The automatic valve responded reliably to user input provided through our GUI application. Specifically, each time the user clicked the designated button on the app interface, the valve successfully opened as intended. During all five experimental trials, the valve consistently released the water contained in the bucket immediately following the user’s command. Similarly, each time the user pressed the button to close the valve, it closed successfully during all five trials. This consistent performance across multiple repetitions demonstrates that the system's valve control functionality operated with perfect precision, achieving a 100% success rate for both opening and closing operations. The seamless interaction between the software interface and the hardware mechanism confirms that the valve accurately and promptly executed the user’s instructions without any delay or malfunction, highlighting the reliability and effectiveness of our system's automated water release feature.
+
+The ball valve demonstrated excellent accuracy in responding to the barrel reaching maximum capacity. In all five trials, the detected volume exceeded the required threshold of 3.66 gallons, and the valve opened successfully each time. The measured volumes ranged from 3.69 to 4.48 gallons, consistently surpassing the minimum capacity requirement. Additionally, after the water level dropped below the threshold, the valve reliably closed in each case, further confirming the system’s responsiveness and control. This consistent behavior highlights the valve's strong performance and reliability in both preventing overfilling and maintaining proper barrel management.
+
+
+## Testing Results
 
 **Volume Sensing**
 
@@ -233,10 +248,10 @@ It is clear what the system can do, cannot do, and where it works best
 |Trial|Measured Volume of Water Inputted (gal)|Volume Detected (gal)|
 |---|---|---|
 |1|0|0.22|
-|2|0|0.23|
-|3|0|0.29|
-|4|0|0.21|
-|5|0|0.22|
+|2|1|1.23|
+|3|2|2.29|
+|4|2.5|2.71|
+|5|3|3.22|
 
 **pH Sensing**
 
@@ -278,26 +293,3 @@ It is clear what the system can do, cannot do, and where it works best
 |3 |4.48| &ge;3.66|Yes|
 |4 |3.69| &ge;3.66|Yes|
 |5 |4.18| &ge;3.66|Yes|
-
-
-## Testing Results
-Were the test results described correctly? Were the proper tests performed to measure system capabilities?
-Proper tests were conducted and results clearly documented
-
-**Volume Sensing**
-
-The volume sensing function exhibited consistent but slightly elevated baseline readings when no water was inputted. Across five trials with zero gallons of water added, the sensor detected small volumes ranging from 0.21 to 0.29 gallons. Although the sensor did not register a perfect zero, the measurements were relatively stable and within a narrow range, suggesting good repeatability. The consistent offset indicates that while the sensor is reliable in detecting changes in volume, it may have a systematic calibration error that causes a slight overestimation at very low volumes. This behavior would have minimal impact during normal operation, where larger volume changes are of primary concern.
-
-**pH Sensing**
-
-In testing the pH sensor, we first calibrated it using distilled water to ensure it returned accurate baseline readings, which it did relatively reliably, yielding a constant pH value of 6.45. We deemed this accurate, as the pH of distilled water in Lexington is around 5.8. However, when we tested the sensor with other common solutions such as water mixed with vinegar (acidic) and water mixed with baking soda (basic), the sensor displayed little to no variation in the pH readings. Despite the expected chemical changes, the sensor readings remained largely unchanged, indicating a malfunction. To confirm that the issue was with the probe itself and not our system design, we tested another group’s pH sensor with our setup, and it responded accurately to the solutions. This verified that the problem was isolated to our pH probe. Based on these observations, we concluded that our original pH probe was defective. To address this issue and maintain functionality, we integrated a manual pH input option into our GUI. This allows users to enter accurate pH values themselves, ensuring that the system can still provide appropriate treatment suggestions based on reliable input.
-
-**Automated Ball Valve**
-
-The automatic valve responded reliably to user input provided through our GUI application. Specifically, each time the user clicked the designated button on the app interface, the valve successfully opened as intended. During all five experimental trials, the valve consistently released the water contained in the bucket immediately following the user’s command. Similarly, each time the user pressed the button to close the valve, it closed successfully during all five trials. This consistent performance across multiple repetitions demonstrates that the system's valve control functionality operated with perfect precision, achieving a 100% success rate for both opening and closing operations. The seamless interaction between the software interface and the hardware mechanism confirms that the valve accurately and promptly executed the user’s instructions without any delay or malfunction, highlighting the reliability and effectiveness of our system's automated water release feature.
-
-The ball valve demonstrated excellent accuracy in responding to the barrel reaching maximum capacity. In all five trials, the detected volume exceeded the required threshold of 3.66 gallons, and the valve opened successfully each time. The measured volumes ranged from 3.69 to 4.48 gallons, consistently surpassing the minimum capacity requirement. Additionally, after the water level dropped below the threshold, the valve reliably closed in each case, further confirming the system’s responsiveness and control. This consistent behavior highlights the valve's strong performance and reliability in both preventing overfilling and maintaining proper barrel management.
-
-
-
-

@@ -224,7 +224,7 @@ We decided to 3D print a plastic box to hold our Redboard and circuitry because 
 One thing we debated at the beginning stages of our project was where to put the outlet of our bucket. We were debating whether or not to put it on the bottom surface or whether to put it on the side of the bucket. We decided to put it on the bottom since it allowed for minimal water stagnation, it provided clearance for our hose, and we had gravity working to encourage flow downward. One issue with this location is that our internal pipe connection is not entirely flush with the bottom and extends upward into the bucket. This means the bucket will never be completely empty. Another engineer could improve our design by slanting the inside of the bottom of the bucket. This would prevent any stagnation.
 
 
-## Testing Results Discussion
+## Test Results Discussion
 **Volume Sensing**
 
 The volume sensing function exhibited consistent but slightly elevated baseline readings when water was input. Across trials with different numbers of gallons of water added, the sensor detected a small offset ranging from 0.21 to 0.29 gallons. Although the sensor did not register a perfect value, the measurements were relatively stable and within a narrow range, suggesting good repeatability. The consistent offset indicates that while the sensor is reliable in detecting changes in volume, it may have a systematic calibration error that causes a slight overestimation at very low volumes. This behavior would have minimal impact during normal operation, where larger volume changes are of primary concern.

@@ -12,7 +12,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 |-----------------|------------------|-------------------------------------------------------------|----------------------------------------|--------------|-----------|----------------|--------------|---------------------------|-------------------------------------------------------------------------------------------------------------|------------------|----------|--------------------|
 | 1001 | Plastic Bucket | 5-Gallon, HDPE | Comes with wire handle | 1.0 | each | 3.73 | Menards | 6482910 | [Link](https://www.menards.com/main/grocery-home/cleaners-household-essentials/cleaning-supplies/cleaning-tools/menards-reg-5-gallon-bucket/6482910/p-1444426310607-c-7113.htm) | 1.0 | each | 3.73 |
 | 1002 | pH sensor | Teyleten pH detection sensor | arduino compatible | 1.0 | each | 18.99 | Amazon | B09H1MJS4S | [Link](https://www.amazon.com/dp/B09H1MJS4S) | 1.0 | each | 18.99 |
-| 1003 | wood glue | Gorilla Wood Glue |  | 0.12 | fl oz. | 0.1191 | Home Depot | 62020 | [Link](https://www.homedepot.com/p/Gorilla-4-oz-Wood-Glue-62020/100672057) | 4.0 | fl oz. | 3.97 |
+| 1003 | Wood Glue | Gorilla Wood Glue |  | 0.12 | fl oz. | 0.1191 | Home Depot | 62020 | [Link](https://www.homedepot.com/p/Gorilla-4-oz-Wood-Glue-62020/100672057) | 4.0 | fl oz. | 3.97 |
 | 1004 | Ball Valve | U.S. Solid Motorized Ball Valve- 1/2" Brass Ball Valve | 9-24V AC/DC and 2 Wire Auto Return Setup | 1.0 | Each | 34.02 | Amazon | ANSI B16.34, IP65 | [Link](https://www.amazon.com/dp/B072QW8ST4) | 1.0 | Each | 34.02 |
 | 1005 | 1 inch Plywood | 3/4 inch thick, sanded plywood |  | 225.0 | Sq in | 4.666 | Home Depot | 205960 | [Link](https://www.homedepot.com/p/Handprint-3-4-in-x-2-ft-x-4-ft-Sanded-Plywood-205960/205960) | 1152.0 | Sq in | 23.89 |
 | 1006 | Porch screening | Charcoal fiberglass screen roll |  | 33.18 | sq in | 0.262 | Home Depot | FCS10396-M | [Link](https://www.homedepot.com/p/Saint-Gobain-ADFORS-36-in-x-84-in-Charcoal-Fiberglass-Screen-Roll-FCS10396-M/203176333) | 3024.0 | sq in | 11.48 |
@@ -62,6 +62,17 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 </p>
 
 ### Code
+
+The following code was used to control the components attached to our RedBoard.
+```cpp
+PASTE HERE
+```
+
+The following code created our userinterface on streamlit.
+```cpp
+PASTE HERE
+```
+
 ### Assembly Instructions
 **Bucket and Stand Assembly**
 1. To assemble the bucket and stand, we started by using a compass to outline the size of the hole we wanted to cut in the lid. Using a drill, we made a hole inside of the circle we drew to make a starting point to cut the circle out. Using a jig saw, we cut the circle out of the lid.

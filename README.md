@@ -65,12 +65,321 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 
 The following code was used to control the components attached to our RedBoard.
 ```cpp
-PASTE HERE
+// Valve control pins
+const int VALVE_ON = 7;
+
+// Ultrasonic sensor pins
+const int TRIG_PIN = 2;
+const int ECHO_PIN = 3;
+
+// pH sensor pin
+const int PH_PIN = A0;
+
+// Bucket dimensions (in inches)
+const float BUCKET_HEIGHT_IN = 15.0;
+const float DIAMETER_TOP = 12.0;
+const float DIAMETER_BOTTOM = 10.25;
+
+String inputCommand = "";
+bool showCloseMessage = false;
+unsigned long closeMessageStart = 0;
+unsigned long lastVolumePrintTime = 0;
+
+bool valveOpen = false;
+bool manualOverride = false;
+
+void setup() {
+  pinMode(VALVE_ON, OUTPUT);
+  digitalWrite(VALVE_ON, LOW);
+
+
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+
+  Serial.begin(9600);
+  Serial.println("System ready. Type 'open', 'close', or 'ph'.");
+}
+
+void loop() {
+  float distance_cm = readDistanceCM();
+  float gallons = calculateGallons(distance_cm);
+
+  // Display gallons every 2 seconds
+  if (millis() - lastVolumePrintTime >= 2000) {
+    Serial.print("Water Level: ");
+    Serial.print(gallons, 2);
+    Serial.println(" gallons");
+    lastVolumePrintTime = millis();
+  }
+
+  // Auto control only if no manual override
+  if (!manualOverride) {
+    if (!valveOpen && distance_cm < 10.0) {
+      Serial.println("Fancy Bucket 3000 too full. Releasing some water");
+      digitalWrite(VALVE_ON, HIGH);
+      valveOpen = true;
+    } 
+    else if (valveOpen && distance_cm >= 12.0) {
+      digitalWrite(VALVE_ON, LOW);
+      valveOpen = false;
+      Serial.println("Sufficient water released.");
+    }
+  }
+
+  // Handle serial input
+  if (Serial.available() > 0) {
+    inputCommand = Serial.readStringUntil('\n');
+    inputCommand.trim();
+
+    if (inputCommand == "open") {
+      Serial.println("Manual override: opening valve.");
+      manualOverride = true;
+      digitalWrite(VALVE_ON, HIGH);
+      valveOpen = true;
+    }
+
+    else if (inputCommand == "close") {
+      Serial.println("Manual override: closing valve.");
+      manualOverride = false;
+      digitalWrite(VALVE_ON, LOW);
+      valveOpen = false;
+      showCloseMessage = true;
+      closeMessageStart = millis();
+    }
+
+    else if (inputCommand == "ph") {
+      Serial.println("Have you inserted the pH sensor and begun stirring? (yes/no)");
+      while (Serial.available() == 0);
+      String confirmation = Serial.readStringUntil('\n');
+      confirmation.trim();
+
+      if (confirmation == "no") {
+        Serial.println("Please insert the pH sensor and gently stir with it, then type 'ph' again when ready.");
+      }
+      else if (confirmation == "yes") {
+        Serial.println("Continue gently stirring for 5 seconds...");
+        for (int i = 5; i > 0; i--) {
+          Serial.print(i);
+          Serial.println("...");
+          delay(1000);
+        }
+
+        float pH = readPH();
+        Serial.print("pH: ");
+        Serial.println(pH, 2);
+
+        if (pH >= 6.5 && pH <= 8.5) {
+          Serial.println("pH is safe! Water is suitable for release.");
+        }
+        else if (pH < 6.5) {
+          Serial.println("Your water is currently acidic. To make your water safe to release, please use baking soda to raise the pH.");
+        }
+        else {
+          Serial.println("Your water is currently basic. To make your water safe to release, please use diluted white vinegar to lower the pH.");
+        }
+      }
+    }
+  }
+
+  if (showCloseMessage && millis() - closeMessageStart >= 4000) {
+    Serial.println("Valve closed. Power off.");
+    showCloseMessage = false;
+  }
+}
+
+// Sensor functions
+
+float readDistanceCM() {
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
+
+  long duration = pulseIn(ECHO_PIN, HIGH);
+  return duration * 0.0343 / 2.0;
+}
+
+float calculateGallons(float distance_cm) {
+  float distance_in = distance_cm / 2.54;
+  float water_height = BUCKET_HEIGHT_IN - distance_in;
+  if (water_height <= 0) return 0.0;
+
+  float r1 = DIAMETER_BOTTOM / 2.0;
+  float r2 = DIAMETER_TOP / 2.0;
+
+  float volume_cubic_in = (1.0 / 3.0) * PI * water_height * (r1 * r1 + r1 * r2 + r2 * r2);
+  return (volume_cubic_in / 231.0) - 1;
+}
+
+float readPH() {
+  int adc = analogRead(PH_PIN);
+  float voltage = adc * (5.0 / 1023.0);
+  float pH = -5.70 * voltage + 29.18;
+  return pH;
+}
 ```
 
 The following code created our user interface on streamlit.
 ```cpp
-PASTE HERE
+import tkinter as tk
+from tkinter import messagebox
+# from PIL import Image, ImageTk
+import serial
+import threading
+import time
+
+
+# ----- Serial Setup -----
+SERIAL_PORT = 'COM5'  # Adjust to match your system
+BAUD_RATE = 9600
+ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+
+
+# ----- GUI Setup -----
+root = tk.Tk()
+root.title("💧 Fancy Bucket 3000")
+root.configure(bg="#1e1e1e")
+
+
+# ----- Rain Drop Icon (optional) -----
+try:
+    rain_img = Image.open("rain_drop.png").resize((40, 40))
+    rain_icon = ImageTk.PhotoImage(rain_img)
+    left_rain = tk.Label(root, image=rain_icon, bg="#1e1e1e")
+    left_rain.grid(row=0, column=0, padx=(10, 5), pady=10)
+    right_rain = tk.Label(root, image=rain_icon, bg="#1e1e1e")
+    right_rain.grid(row=0, column=3, padx=(5, 10), pady=10)
+except:
+    left_rain = tk.Label(root, text="💧", font=("Arial", 24), fg="white", bg="#1e1e1e")
+    left_rain.grid(row=0, column=0, padx=(10, 5), pady=10)
+    right_rain = tk.Label(root, text="💧", font=("Arial", 24), fg="white", bg="#1e1e1e")
+    right_rain.grid(row=0, column=3, padx=(5, 10), pady=10)
+
+
+# ----- Water Level Label -----
+water_label = tk.Label(root, text="Water Level: -- gallons", font=("Arial", 18), fg="white", bg="#1e1e1e")
+water_label.grid(row=0, column=1, columnspan=2, pady=10)
+
+
+# ----- pH Status Label -----
+ph_status = tk.Label(root, text="Prompting pH sensor...", font=("Arial", 12), fg="gray", bg="#1e1e1e")
+ph_status.grid(row=1, column=0, columnspan=4, pady=4)
+
+
+# ----- Command Buttons -----
+def send_command(cmd):
+    ser.write((cmd + "\n").encode())
+
+
+def open_valve():
+    ph_status.config(text="Opening valve...", fg="white")
+    send_command("open")
+    root.after(4000, lambda: ph_status.config(text="Valve opened.", fg="green"))
+
+
+def close_valve():
+    ph_status.config(text="Closing valve...", fg="white")
+    send_command("close")
+    root.after(4000, lambda: ph_status.config(text="Valve closed.", fg="green"))
+
+
+def check_ph():
+    send_command("ph")
+    ph_status.config(text="Prompting pH sensor...", fg="white")
+    yes_button.grid(row=3, column=1)
+    no_button.grid(row=3, column=2)
+
+
+def manual_ph():
+    ph_status.config(text="Select the measured pH range:", fg="white")
+    low_button.grid(row=4, column=0, pady=4)
+    mid_button.grid(row=4, column=1, pady=4)
+    high_button.grid(row=4, column=2, pady=4)
+
+
+def handle_manual_ph(level):
+    low_button.grid_remove()
+    mid_button.grid_remove()
+    high_button.grid_remove()
+    if level == "low":
+        messagebox.showinfo("Recommendation", "Your water is currently acidic. Please use baking soda to raise the pH.")
+    elif level == "mid":
+        messagebox.showinfo("Recommendation", "pH is safe! Water is suitable for release.")
+    elif level == "high":
+        messagebox.showinfo("Recommendation", "Your water is currently basic. Please use diluted white vinegar to lower the pH.")
+
+
+def handle_yes():
+    send_command("yes")
+    yes_button.grid_remove()
+    no_button.grid_remove()
+
+
+def handle_no():
+    send_command("no")
+    yes_button.grid_remove()
+    no_button.grid_remove()
+
+
+open_button = tk.Button(root, text="Open Valve", width=12, command=open_valve)
+open_button.grid(row=2, column=0, pady=10)
+
+
+close_button = tk.Button(root, text="Close Valve", width=12, command=close_valve)
+close_button.grid(row=2, column=1, pady=10)
+
+
+check_button = tk.Button(root, text="Use pH Sensor", width=16, command=check_ph)
+check_button.grid(row=2, column=2, pady=10)
+
+
+manual_button = tk.Button(root, text="Manual pH Entry", width=16, command=manual_ph)
+manual_button.grid(row=2, column=3, pady=10)
+
+
+# ----- pH Response Buttons -----
+yes_button = tk.Button(root, text="Yes", command=handle_yes)
+no_button = tk.Button(root, text="No", command=handle_no)
+
+
+low_button = tk.Button(root, text="pH < 6.5", command=lambda: handle_manual_ph("low"))
+mid_button = tk.Button(root, text="6.5 ≤ pH ≤ 8.5", command=lambda: handle_manual_ph("mid"))
+high_button = tk.Button(root, text="pH > 8.5", command=lambda: handle_manual_ph("high"))
+
+
+# ----- Serial Reading Thread -----
+def read_serial():
+    while True:
+        if ser.in_waiting:
+            line = ser.readline().decode(errors="ignore").strip()
+            if "Water Level" in line:
+                try:
+                    value = line.split(":")[-1].strip()
+                    water_label.config(text=f"💧 Water Level:{value} gallons")
+                except:
+                    pass
+            elif "please use" in line.lower() or "pH is safe" in line:
+                messagebox.showinfo("pH Recommendation", line)
+            elif "please insert" in line.lower():
+                ph_status.config(text=line, fg="yellow")
+            elif "stirring" in line.lower():
+                ph_status.config(text=line, fg="white")
+            elif "Have you inserted" in line:
+                ph_status.config(text=line, fg="white")
+                yes_button.grid(row=3, column=1)
+                no_button.grid(row=3, column=2)
+            else:
+                ph_status.config(text=line, fg="white")
+        time.sleep(0.5)
+
+
+thread = threading.Thread(target=read_serial, daemon=True)
+thread.start()
+
+
+# ----- Run GUI -----
+root.mainloop()
 ```
 
 ### Assembly Instructions

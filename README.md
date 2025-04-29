@@ -153,13 +153,20 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 1. To construct our system, we first built a simple circuit that included a ball valve and a motor controller.
 2. Next, we had to create a second power supply for the ball valve. One thing that we did not originally consider when we ordered the ball valve was that it required at least 9 Volts of power to function properly. Our Redboard could only provide 5 Volts and the battery pack that came with our Sparkfun Inventor Kit could only provide 6 Volts (1.5 Volts per battery). Thus, we found a 12 Volt source, then retrofit the wires to fit the ground and positive wires of the connector of the double A battery pack holder. After stripping the wires, we used a multimeter to determine which wire was positive and which was negative. Then, we soldered them to the battery pack connecter and wrapped the wires in electrical tape.
 3. Next, we added a pH sensor. We connected wires to the ports on the pH sensor for power, ground, and one labled "Po" to represent pH output.
-4. Finally, we incorporated an ultrasonic sensor. The final circuit diagram can be seen in figure _____. A picture of our final circuit can be seen in figure ________.
+4. Finally, we incorporated an ultrasonic sensor. The final circuit diagram can be seen in figure 14. A picture of our final circuit can be seen in figure 15.
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Circuit%20Diagram-1.jpg">
 </p>
 <p align="center">
-  <em>Figure X: Complete Circuit Diagram </em>
+  <em>Figure 14: Circuit Diagram </em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Complete%20Circuit.jpg">
+</p>
+<p align="center">
+  <em>Figure 15: Completed Circuit </em>
 </p>
 
 **Software and GUI**

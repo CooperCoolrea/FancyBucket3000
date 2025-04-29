@@ -15,7 +15,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 | 1002 | pH sensor | Teyleten pH detection sensor | arduino compatible | 1.0 | each | 18.99 | Amazon | B09H1MJS4S | [Link](https://www.amazon.com/dp/B09H1MJS4S) | 1.0 | each | 18.99 |
 | 1003 | wood glue | Gorilla Wood Glue |  | 0.12 | fl oz. | 0.1191 | Home Depot | 62020 | [Link](https://www.homedepot.com/p/Gorilla-4-oz-Wood-Glue-62020/100672057) | 4.0 | fl oz. | 3.97 |
 | 1004 | Ball Valve | U.S. Solid Motorized Ball Valve- 1/2" Brass Ball Valve | 9-24V AC/DC and 2 Wire Auto Return Setup | 1.0 | Each | 34.02 | Amazon | ANSI B16.34, IP65 | [Link](https://www.amazon.com/dp/B072QW8ST4) | 1.0 | Each | 34.02 |
-| 1005 | Plywood | 3/4 inch thick, sanded plywood |  | 225.0 | Sq in | 4.666 | Home Depot | 205960 | [Link](https://www.homedepot.com/p/Handprint-3-4-in-x-2-ft-x-4-ft-Sanded-Plywood-205960/205960) | 1152.0 | Sq in | 23.89 |
+| 1005 | 1 inch Plywood | 3/4 inch thick, sanded plywood |  | 225.0 | Sq in | 4.666 | Home Depot | 205960 | [Link](https://www.homedepot.com/p/Handprint-3-4-in-x-2-ft-x-4-ft-Sanded-Plywood-205960/205960) | 1152.0 | Sq in | 23.89 |
 | 1006 | Porch screening | Charcoal fiberglass screen roll |  | 33.18 | sq in | 0.262 | Home Depot | FCS10396-M | [Link](https://www.homedepot.com/p/Saint-Gobain-ADFORS-36-in-x-84-in-Charcoal-Fiberglass-Screen-Roll-FCS10396-M/203176333) | 3024.0 | sq in | 11.48 |
 | 1007 | 2.5 inch screws | Coarse zinc-plated steel square-head pocket screw |  | 16.0 | each | 2.71 | Home Depot | SML-C250-50 | [Link](https://www.homedepot.com/p/Kreg-2-1-2-in-Coarse-Zinc-Plated-Steel-Pocket-Screws-50-Pack-SML-C250-50/100401223) | 50.0 | each | 8.47 |
 | 1008 | 1.25 inch screws | Square maxi-Loc head coarse zinc-plated steel pocket-hole screw |  | 12.0 | each | 1.14 | Home Depot | SML-C125-100 | [Link](https://www.homedepot.com/p/Kreg-1-1-4-in-Square-Maxi-Loc-Coarse-Zinc-Plated-Steel-Pocket-Hole-Screw-100-Pack-SML-C125-100/100401222) | 100.0 | each | 9.47 |
@@ -23,7 +23,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 | 1010 | Bucket lid | Standard lid for 5 gallon plastic pail |  | 1.0 | each | 2.00 | Uline | S-9948BLU | [Link](https://www.uline.com/Product/Detail/S-9948BLU/Pails/Standard-Lid-for-35-5-6-and-7-Gallon-Plastic-Pail-Blue) | 1.0 | each | 2.00 |
 | 1011 | Bucket connector | 1/2 in. PVC schedule 40 male adapter |  | 1.0 | each | 0.59 | Home Depot | PVC021090600HD | [Link](https://www.homedepot.com/p/Charlotte-Pipe-1-2-in-PVC-Schedule-40-Male-MPT-x-S-Adapter-PVC021090600HD/203811636) | 1.0 | each | 0.59 |
 | 1012 | Silicone caulk | GE Silicone 1 All Purpose Clear Caulk |  | 1.5 | oz | 1.32 | Lowes | 2795576 | [Link](https://www.lowes.com/pd/GE-Silicone-1-All-Purpose-Windows-Doors-Exteriors-10-1-oz-Clear-Silicone-Caulk/5013443639) | 10.1 | oz | 8.88 |
-
+| 1013 | 0.25 inch Plywood | 1/4 in. x 2 ft. x 2 ft. Sanded Plywood Project Panel |  | 38.5 | sq in. | 0.53 | Home Depot | 300810 | [Link](https://www.homedepot.com/p/Handprint-1-4-in-x-2-ft-x-2-ft-Sanded-Plywood-Project-Panel-) | 576 | sq in. | 7.88 |
 
 
 ### Drawings and Circuit Diagrams
@@ -137,9 +137,16 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
   <em>Figure 12: Final Sensor with Caulk</em>
 </p>
 
-13. To attach the electronics box, we put a vertical line of the same caulk down the center of back of the plywood attached to the box. We laid the box face down on a table, then placed the side of the bucket on top of it, positioning the box to be approximately 3 inches below the hole we cut for the ultrasonic sensor. The bucket was propped up in position by objects we had, then left to dry overnight. After this, the Fancy Bucket 3000 was fully assembled!
+13. To attach the electronics box, we put a vertical line of the same caulk down the center of back of the plywood attached to the box. We laid the box face down on a table, then placed the side of the bucket on top of it, positioning the box to be approximately 3 inches below the hole we cut for the ultrasonic sensor. The bucket was propped up in position by objects we had, then left to dry overnight.
 
+14. We used some double sided tape to hols the circuit in place when we open and close the electronics box, and threaded all of the appropriate wires through. After this, the Fancy Bucket 3000 was fully assembled!
 
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Final%20box.JPG">
+</p>
+<p align="center">
+  <em>Figure 13: Final Fancy Bucket 3000</em>
+</p>
     
 
 **Circuit**

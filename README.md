@@ -68,7 +68,7 @@ The following code was used to control the components attached to our RedBoard.
 PASTE HERE
 ```
 
-The following code created our userinterface on streamlit.
+The following code created our user interface on streamlit.
 ```cpp
 PASTE HERE
 ```

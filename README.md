@@ -202,7 +202,7 @@ All test equipment specified (model numbers) and procedures fully described
 1. To test the pH sensor, we filled cups with fluids that had different pH values. 
 2. Then we would remove the pH sensor from its cover and insert it into the different fluids.
 3. Between each different solution, we made sure to insert the probe into distilled water as a calibration technique.
-4. Finally, we would ensure that the pH values being reported by the serial monitor were approximately correct. We merely ensured that anything that was in its estimated range. If we were testing the pH sensor in an extremely acidic solution, we knew our pH sensor was not working if it was reporting an almost neutral solution.
+4. Finally, we would ensure that the pH values being reported by the serial monitor were approximately correct by seeing if the reported value was in the estimated range the fluid should be in. If we were testing the pH sensor in an extremely acidic solution like vinegar, we knew our pH sensor was not working if it was reporting a neutral pH around 7.
 5. Initially, our pH sensor was reporting very similar, neutral values no matter what fluid it was submerged in. To fix this, we integrated a calibration function into our code. Based on the voltage the probe was measuring in distilled water, the calibration function ensured that the output would be close to a neutral pH of 7. Once we utilized the calibration function, we recieved accurate pH results in different solutions.
 
 

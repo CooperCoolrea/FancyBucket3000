@@ -1,7 +1,7 @@
 # FancyBucket3000
 
 ## Summary of Project
-The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensing, and an automatic valve opening for irrigation systems. This system utilizes an ultrasonic sensor to determine when the rain barrel is getting full and will notify the user that water testing needs to be done before releasing the water to the plants. We integrated a digital pH sensor to report the acidity of the water to the user and recommend treatments if necessary. Once the user tells the system the water is treated by pushing a button on our UI, our system opens a ball valve to release the water to the irrigation system. This system will consist of piping from the Fancy Bucket 3000 to a prepared trough with soil and plants. Our project is fully operational and meets all outputs listed in the project initiation.
+The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensing, and an automatic valve opening for irrigation systems. This system utilizes an ultrasonic sensor to determine when the rain barrel is getting full and will notify the user that water testing needs to be done before releasing the water to the plants. We integrated a digital pH sensor to report the acidity of the water to the user and recommend treatments if necessary. There is also manual pH entry if the user prefers to use pH strips. Once the user has treated the water, they can push a button on our UI to open a ball valve to release the water to the irrigation system. This system will consist of piping from the Fancy Bucket 3000 to a prepared trough with soil and plants. Our project is fully operational and meets all outputs listed in the project initiation.
 
 ## Design Description
 ### Materials

@@ -39,21 +39,21 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Bucket%20and%20Lid%20Drawing.png">
 </p>
 <p align="center">
-  <em>Figure 2: 3D model of bucket and lid design</em>
+  <em>Figure 2: 3D Model of Bucket and Lid Design</em>
 </p>
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Electronic%20Box%20Drawing.png">
 </p>
 <p align="center">
-  <em>Figure 3: 3D model of waterproof box</em>
+  <em>Figure 3: 3D Model of Waterproof Box</em>
 </p>
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Cover%20for%20Electric%20Box%20Drawing.png">
 </p>
 <p align="center">
-  <em>Figure 4: 3D model of waterproof box lid</em>
+  <em>Figure 4: 3D Model of Waterproof Box Lid</em>
 </p>
 
 <p align="center">
@@ -73,7 +73,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/drying%20lid.JPG">
 </p>
 <p align="center">
-  <em>Figure x: Lid and mesh cover drying after assembly</em>
+  <em>Figure 6: Lid and Mesh Cover Drying After Assembly</em>
 </p>
 
 3. Using a table saw, we cut a 16" by 16" square. Using a Miter Saw, we cut 4 16" long pieces, two 12" long pieces, and one 8" long piece from the 2-in x 4-in lumber. 
@@ -87,7 +87,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/drying%20stand.JPG">
 </p>
 <p align="center">
-  <em>Figure X: Wooden stand drying after assembly</em>
+  <em>Figure 7: Wooden Stand Drying After Assembly</em>
 </p>
 
 7. For the valve portion of the bucket, we used a drill with a step cone drill bit attachment to make a 1/2 inch hole in the center of the bottom of the bucket. We applied silicone caulk  to the area around the hole on the inside of the bucket, and screwed in the pipe attachment as far as it could go. This was left to dry overnight. When the bucket was eventually dry, a wrench was used to hold the pipe in place while the sensor was glued on. 
@@ -100,15 +100,47 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/box%20picture.JPG">
 </p>
 <p align="center">
-  <em>Figure X: Final 3D printed box and lid</em>
+  <em>Figure 8: Final 3D Printed Box and Lid</em>
 </p>
 
-10. When the box was printed, we had to drill some holes in the box to allow for wires to get out, these are shown below. 
+10. When the box was printed, we had to drill some holes in the box to allow for wires to get out, these are shown below. We held our circuit up to the box, and sketched out where we needed the holes, then drilled them around 1/4 to 1/2 inch in diameter. 
 
-INSERT PIC
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Box%20drill%20holes.JPG">
+</p>
+<p align="center">
+  <em>Figure 9: Electronic Box Drill Holes</em>
+</p>
 
-11. To attach the box to the bucket, first we hot glued the arduino where we wanted it to sit. Then …………………………..
+11. For the electronics box, we needed to add a piece of plywood to the back to make it able to be attached. We cut a piece of 1/4 inch plywood that was the same size as the outer edge of the box shown in the drawings section (7 inch by 5.5 inch), then used small amounts of epoxy on the corners of the box to hold it together. We taped the box and wood together on every side, then left it to dry overnight. When the epoxy was dry, we peeled off the tape. 
 
+12. To attach the ultrasonic sensor to the bucket, we used the same step cone drill bit attachment to make a small hole one inch down from the top of the bucket. Then, we taped the ultrasonic sensor with the wires attached to it in the hole, making sure the sensor was angled to be perpendicular to the bottom of the bucket so we could get the best reading. We also put tape on the sensors themselves to make sure no caulk would obstruct them. This was then caulked in place, and left to dry overnight. The tape placement and caulk are shown in the images below. Once the caulk was dry, we peeled off the tape.
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Outside%20bucket%20tape.JPG">
+</p>
+<p align="center">
+  <em>Figure 10: Tape on the Outside of the Bucket</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/Inside%20sensor%20tape.JPG">
+</p>
+<p align="center">
+  <em>Figure 11: Tape on the Sensor Inside the Bucket</em>
+</p>
+
+<p align="center">
+<img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/US%20caulk.JPG">
+</p>
+<p align="center">
+  <em>Figure 12: Final Sensor with Caulk</em>
+</p>
+
+13. To attach the electronics box, we put a vertical line of the same caulk down the center of back of the plywood attached to the box. We laid the box face down on a table, then placed the side of the bucket on top of it, positioning the box to be approximately 3 inches below the hole we cut for the ultrasonic sensor. The bucket was propped up in position by objects we had, then left to dry overnight. After this, the Fancy Bucket 3000 was fully assembled!
+
+
+    
 
 **Circuit**
 1. To construct our system, we first built a simple circuit that included a ball valve and a motor controller.

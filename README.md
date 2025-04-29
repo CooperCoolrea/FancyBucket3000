@@ -6,7 +6,6 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 ## Design Description
 ### Materials
 
-
 **Table 1: Bill of Materials**
 
 | **Part Number** | **Part Name**    | **Description**                                             | **Notes**                             | **Quantity** | **Units** | **Total Cost** | **Supplier** | **Supplier Part Number** | **Link** | **Package Size** | **Unit** | **Package price** |
@@ -24,7 +23,6 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
 | 1011 | Bucket connector | 1/2 in. PVC schedule 40 male adapter |  | 1.0 | each | 0.59 | Home Depot | PVC021090600HD | [Link](https://www.homedepot.com/p/Charlotte-Pipe-1-2-in-PVC-Schedule-40-Male-MPT-x-S-Adapter-PVC021090600HD/203811636) | 1.0 | each | 0.59 |
 | 1012 | Silicone caulk | GE Silicone 1 All Purpose Clear Caulk |  | 1.5 | oz | 1.32 | Lowes | 2795576 | [Link](https://www.lowes.com/pd/GE-Silicone-1-All-Purpose-Windows-Doors-Exteriors-10-1-oz-Clear-Silicone-Caulk/5013443639) | 10.1 | oz | 8.88 |
 | 1013 | 0.25 inch Plywood | 1/4 in. x 2 ft. x 2 ft. Sanded Plywood Project Panel |  | 38.5 | sq in. | 0.53 | Home Depot | 300810 | [Link](https://www.homedepot.com/p/Handprint-1-4-in-x-2-ft-x-2-ft-Sanded-Plywood-Project-Panel-) | 576 | sq in. | 7.88 |
-
 
 ### Drawings and Circuit Diagrams
 
@@ -94,7 +92,7 @@ The Fancy Bucket 3000 is a rain collection system with volume sensing, pH sensin
  
 8. To cut the hole in the wooden stand, we sketched out an area around the size of the entire valve, and used an oscillating saw to cut out the hole. 
 
-9. For the waterproof box around our electronics, we 3D modeled and printed a box and sliding door in Autodesk Fusion. The following images show the design and box, and the 3D model is in the repository. 
+9. For the waterproof box around our electronics, we 3D modeled and printed a box and sliding door in Autodesk Fusion. The following image shows the printed electronic box and cover, and the 3D model is shown in the Drawings section.
 
 <p align="center">
 <img width=50% src="https://github.com/CooperCoolrea/FancyBucket3000/blob/main/box%20picture.JPG">
